@@ -1,0 +1,30 @@
+﻿cities:
+  札幌市:
+    latitude: 43.050
+    longitude: 141.300
+    zoom: 10.0
+
+  旭川市:
+    latitude: 43.775
+    longitude: 142.370
+    zoom: 11.0
+
+  帯広市:
+    latitude: 42.921
+    longitude: 143.180
+    zoom: 11.5
+
+  石狩市:
+    latitude: 43.180
+    longitude: 141.320
+    zoom: 11.0
+
+  北見市: 
+    latitude: 43.805
+    longitude: 143.890
+    zoom: 12.5
+
+  岩見沢市: 
+    latitude: 43.204
+    longitude: 141.759
+    zoom: 11.5

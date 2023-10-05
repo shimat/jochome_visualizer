@@ -1,0 +1,9 @@
+[runner]
+postScriptGC = true
+
+[server]
+# maxMessageSize = 500
+# enableWebsocketCompression = true
+
+[theme]
+base="dark"
