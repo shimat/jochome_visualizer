@@ -115,7 +115,6 @@ def mod_data(df: pd.DataFrame) -> pd.DataFrame:
     new_df = pd.DataFrame(
         data=new_data,
         columns=new_data.keys())
-    st.dataframe(new_df)
     return new_df
 
 
