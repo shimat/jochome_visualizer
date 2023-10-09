@@ -1,7 +1,7 @@
 ﻿cities:
   札幌市:
-    latitude: 43.050
-    longitude: 141.300
+    latitude: 43.052
+    longitude: 141.330
     zoom: 10.0
 
   旭川市:
@@ -20,7 +20,7 @@
     zoom: 13.0
 
   岩見沢市: 
-    latitude: 43.204
+    latitude: 43.195
     longitude: 141.759
     zoom: 11.5
 
@@ -73,3 +73,128 @@
     latitude: 43.807
     longitude: 141.933
     zoom: 13.0
+
+  上砂川町: 
+    latitude: 43.483
+    longitude: 141.973
+    zoom: 13.0
+
+  鷹栖町: 
+    latitude: 43.844
+    longitude: 142.354
+    zoom: 13.0
+
+  当麻町: 
+    latitude: 43.830
+    longitude: 142.515
+    zoom: 13.0
+
+  東神楽町: 
+    latitude: 43.711
+    longitude: 142.432
+    zoom: 12.5
+
+  美深町: 
+    latitude: 44.482
+    longitude: 142.346
+    zoom: 13.0
+
+  羽幌町: 
+    latitude: 44.366
+    longitude: 141.701
+    zoom: 13.0
+
+  幌延町: 
+    latitude: 45.017
+    longitude: 141.849
+    zoom: 13.5
+
+  豊富町: 
+    latitude: 45.101
+    longitude: 141.775
+    zoom: 13.0
+
+  浜頓別町: 
+    latitude: 45.127
+    longitude: 142.363
+    zoom: 13.0
+
+  遠軽町: 
+    latitude: 44.064
+    longitude: 143.529
+    zoom: 13.0
+
+  大空町: 
+    latitude: 43.913
+    longitude: 144.170
+    zoom: 13.0
+
+  美幌町: 
+    latitude: 43.824
+    longitude: 144.102
+    zoom: 13.0
+
+  標津町: 
+    latitude: 43.662
+    longitude: 145.127
+    zoom: 12.5
+
+  中標津町: 
+    latitude: 43.554
+    longitude: 144.981
+    zoom: 12.5
+
+  浜中町: 
+    latitude: 43.078
+    longitude: 145.125
+    zoom: 13.0
+
+  白糠町: 
+    latitude: 42.958
+    longitude: 144.071
+    zoom: 13.0
+
+  池田町: 
+    latitude: 42.927
+    longitude: 143.449
+    zoom: 13.0
+
+  広尾町: 
+    latitude: 42.289
+    longitude: 143.314
+    zoom: 13.5
+
+  中札内村: 
+    latitude: 42.699
+    longitude: 143.134
+    zoom: 13.0
+
+  芽室町: 
+    latitude: 42.912
+    longitude: 143.052
+    zoom: 13.0
+
+  清水町: 
+    latitude: 43.015
+    longitude: 142.884
+    zoom: 13.0
+
+  新得町: 
+    latitude: 43.080
+    longitude: 142.832
+    zoom: 13.0
+
+  士幌町: 
+    latitude: 43.169
+    longitude: 143.249
+    zoom: 13.5
+
+  足寄町: 
+    latitude: 43.244
+    longitude: 143.550
+    zoom: 13.0
+
+  陸別町: 
+    latitude: 43.468
+    longitude: 143.747
+    zoom: 13.5
