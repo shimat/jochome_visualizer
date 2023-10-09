@@ -18,7 +18,16 @@ city_name = st.selectbox(
         "帯広市",
         "北見市",
         "岩見沢市",
+        "網走市",
+        "美唄市",
+        "芦別市",
+        "江別市",
+        "士別市",
+        "名寄市",
+        "砂川市",
         "石狩市",
+        "深川市",
+        "沼田町",
     ),
 )
 
@@ -70,16 +79,16 @@ for name, df in df_map.items():
         )
         st.pydeck_chart(deck)
 
-        address_label = "住所"
         st.dataframe(
             df,
             hide_index=True,
             column_config={
                 "prefecture_name": st.column_config.TextColumn("都道府県", width="small"),
-                "address": address_label,
-                "sub_addresses": st.column_config.ListColumn("含む町名"),
+                "city_name": st.column_config.TextColumn("市町村", width="small"),
+                "town_group": st.column_config.TextColumn("条グループ", width="small"),
+                "sub_town_names": st.column_config.ListColumn("含む町名"),
                 "lonlat_coordinates": None,
-                "city_name": None,
+                "fill_color": None
             },
         )
 

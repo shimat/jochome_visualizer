@@ -14,17 +14,62 @@
     longitude: 143.180
     zoom: 11.5
 
-  石狩市:
-    latitude: 43.180
-    longitude: 141.320
-    zoom: 11.0
-
   北見市: 
     latitude: 43.805
     longitude: 143.890
-    zoom: 12.5
+    zoom: 13.0
 
   岩見沢市: 
     latitude: 43.204
     longitude: 141.759
     zoom: 11.5
+
+  網走市: 
+    latitude: 44.022
+    longitude: 144.273
+    zoom: 13.0
+
+  美唄市: 
+    latitude: 43.325
+    longitude: 141.890
+    zoom: 12.0
+
+  芦別市: 
+    latitude: 43.519
+    longitude: 142.177
+    zoom: 12.0
+
+  江別市: 
+    latitude: 43.110
+    longitude: 141.557
+    zoom: 13.0
+
+  士別市: 
+    latitude: 44.175
+    longitude: 142.390
+    zoom: 12.5
+
+  名寄市: 
+    latitude: 44.356
+    longitude: 142.461
+    zoom: 12.5
+
+  砂川市: 
+    latitude: 43.501
+    longitude: 141.908
+    zoom: 11.5
+
+  石狩市:
+    latitude: 43.180
+    longitude: 141.320
+    zoom: 11.0
+
+  深川市: 
+    latitude: 43.721
+    longitude: 142.050
+    zoom: 12.5
+
+  沼田町: 
+    latitude: 43.807
+    longitude: 141.933
+    zoom: 13.0

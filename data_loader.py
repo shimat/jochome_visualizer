@@ -69,9 +69,7 @@ def load_data(tree: ElementTree) -> pd.DataFrame:
 
 
 def mod_data(df: pd.DataFrame) -> pd.DataFrame:
-
-    df = df[df["town_name"].str.contains("条")].copy()
-
+    df = df[df["town_name"].str.contains("条", na=False)].copy()
     df["town_group"] = df["town_name"].apply(lambda x: x.split("条")[0]+"条")
 
     def merge_coordinates(group: pd.DataFrame):
@@ -91,12 +89,14 @@ def mod_data(df: pd.DataFrame) -> pd.DataFrame:
         "prefecture_name": [],
         "city_name": [],
         "town_group": [],
+        "sub_town_names": [],
         "lonlat_coordinates": [],
         "fill_color": []
     }
     for group_name, group_df in df.groupby("town_group"):
         prefecture_name = group_df.iloc[0]["prefecture_name"]
         city_name = ",".join(set(group_df["city_name"].values))
+        sub_town_names = [str(v).replace(group_name, "") for v in group_df["town_name"].values]
         md5int = int.from_bytes(hashlib.md5(group_name.encode()).digest())
         b = md5int & 0xFF
         g = (md5int >> 8) & 0xFF
@@ -109,9 +109,10 @@ def mod_data(df: pd.DataFrame) -> pd.DataFrame:
             new_data["prefecture_name"].append(prefecture_name)
             new_data["city_name"].append(city_name)
             new_data["town_group"].append(group_name)
+            new_data["sub_town_names"].append(sub_town_names)
             new_data["lonlat_coordinates"].append(c)
             new_data["fill_color"].append([r, g, b, 128])
-    
+
     new_df = pd.DataFrame(
         data=new_data,
         columns=new_data.keys())
