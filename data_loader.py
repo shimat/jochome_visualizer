@@ -96,7 +96,7 @@ def mod_data(df: pd.DataFrame) -> pd.DataFrame:
     for group_name, group_df in df.groupby("town_group"):
         prefecture_name = group_df.iloc[0]["prefecture_name"]
         city_name = ",".join(set(group_df["city_name"].values))
-        sub_town_names = [str(v).replace(group_name, "") for v in group_df["town_name"].values]
+        sub_town_names = list(set(str(v).replace(group_name, "") for v in group_df["town_name"].values))
         md5int = int.from_bytes(hashlib.md5(group_name.encode()).digest())
         b = md5int & 0xFF
         g = (md5int >> 8) & 0xFF
