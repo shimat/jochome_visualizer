@@ -64,7 +64,7 @@ for name, df in df_map.items():
             auto_highlight=True,
             pickable=True,
         )
-        tooltip = "{address}" if name == "全町名" else "{town_group}"
+        tooltip = "{town_name}" if name == "全町名" else "{town_group}"
         deck = pydeck.Deck(
             layers=(polygon_layer,),
             initial_view_state=pydeck.ViewState(
@@ -88,7 +88,8 @@ for name, df in df_map.items():
                 "town_group": st.column_config.TextColumn("条グループ", width="small"),
                 "sub_town_names": st.column_config.ListColumn("含む町名"),
                 "lonlat_coordinates": None,
-                "fill_color": None
+                "fill_color": None,
+                "town_name": st.column_config.TextColumn("町名", width="medium"),
             },
         )
 

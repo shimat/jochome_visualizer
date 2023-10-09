@@ -38,7 +38,6 @@ def load_data(tree: ElementTree) -> pd.DataFrame:
     prefecture_names: list[str] = []
     city_names: list[str] = []
     town_names: list[str] = []
-    addresses: list[str] = []
     lonlat_lists: list[list[list[list[float]]]] = []
 
     for feature_member in tree.findall("gml:featureMember", NAMESPACES):
@@ -48,7 +47,6 @@ def load_data(tree: ElementTree) -> pd.DataFrame:
         town_name = elem.find("fme:S_NAME", NAMESPACES).text
         city_names.append(city_name)
         town_names.append(town_name)
-        addresses.append(f"{city_name} {town_name}")
 
         pos_list_elem = elem.find("gml:surfaceProperty//gml:Surface//gml:PolygonPatch//gml:exterior//gml:LinearRing//gml:posList", NAMESPACES)
         pos_list = [float(v) for v in pos_list_elem.text.split(" ")]
@@ -59,7 +57,6 @@ def load_data(tree: ElementTree) -> pd.DataFrame:
         "prefecture_name": prefecture_names,
         "city_name": city_names,
         "town_name": town_names,
-        "address": addresses,
         "lonlat_coordinates": lonlat_lists,
     }
     return pd.DataFrame(
