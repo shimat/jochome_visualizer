@@ -69,7 +69,7 @@ def load_data(tree: ElementTree) -> pd.DataFrame:
 
 
 def mod_data(df: pd.DataFrame) -> pd.DataFrame:
-    df = df[df["town_name"].str.contains("条", na=False)].copy()
+    df = df[df["town_name"].str.contains("条[^通]", na=False)].copy()
     df["town_group"] = df["town_name"].apply(lambda x: x.split("条")[0]+"条")
 
     def merge_coordinates(group: pd.DataFrame):
