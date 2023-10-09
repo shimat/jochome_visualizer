@@ -66,8 +66,14 @@ def load_data(tree: ElementTree) -> pd.DataFrame:
 
 
 def mod_data(df: pd.DataFrame) -> pd.DataFrame:
-    df = df[df["town_name"].str.contains("条[^通]", na=False)].copy()
-    df["town_group"] = df["town_name"].apply(lambda x: x.split("条")[0]+"条")
+    df = df[df["town_name"].str.contains("条", na=False)].copy()
+
+    def group_town_name(x: str):
+        if "条通" in x:
+            return x.split("条通")[0]+"条通"
+        return x.split("条")[0]+"条"
+
+    df["town_group"] = df["town_name"].apply(group_town_name)
 
     def merge_coordinates(group: pd.DataFrame):
         polygons = [shapely.geometry.Polygon(c[0])
